@@ -23,7 +23,7 @@
   ],
 
   "modules-left": [
-    "custom/launch_wofi", 
+    "custom/launch_rofi", 
     "hyprland/workspaces",
     "tray",
     "network",
@@ -191,10 +191,10 @@
     "format": "{icon} {volume}%",
     "tooltip": false,
     "format-muted": " Muted",
-    "on-click": "~/.config/HyprV/waybar/scripts/volume --toggle",
+    "on-click": "~/.config/HyprV/hypr/scripts/Volume.sh --toggle",
     "on-click-right": "pavucontrol",
-    "on-scroll-up": "~/.config/HyprV/waybar/scripts/volume --inc",
-    "on-scroll-down": "~/.config/HyprV/waybar/scripts/volume --dec",
+    "on-scroll-up": "~/.config/HyprV/hypr/scripts/Volume.sh --inc",
+    "on-scroll-down": "~/.config/HyprV/hypr/scripts/Volume.sh --dec",
     "scroll-step": 5,
     "format-icons": {
         "headphone": "",
@@ -211,10 +211,10 @@
     "format": "{format_source}",
     "format-source": " {volume}%",
     "format-source-muted": "  Muted",
-    "on-click": "~/.config/HyprV/waybar/scripts/volume --toggle-mic",
+    "on-click": "~/.config/HyprV/hypr/scripts/Volume.sh --toggle-mic",
     "on-click-right": "pavucontrol",
-    "on-scroll-up": "~/.config/HyprV/waybar/scripts/volume --mic-inc",
-    "on-scroll-down": "~/.config/HyprV/waybar/scripts/volume --mic-dec",
+    "on-scroll-up": "~/.config/HyprV/hypr/scripts/Volume.sh --mic-inc",
+    "on-scroll-down": "~/.config/HyprV/hypr/scripts/Volume.sh --mic-dec",
     "scroll-step": 5
   },
 
@@ -252,18 +252,30 @@
        "escape": true
 },
 
-    "custom/launch_wofi": {
+    "custom/launch_rofi": {
         "format": "󱗼",
-        "on-click": "sh -c '(sleep 0.5s; pkill wofi || wofi -c ~/.config/HyprV/wofi/config-lmenu)' & disown",
+        "on-click": "pkill rofi || rofi -show drun -modirun,drun,filebrowser,window",
         "tooltip": false
     },
 
+/*
     "custom/updates": {
         "format": "{}",
         "exec": "~/.config/HyprV/waybar/scripts/update1-sys",
         "on-click": "~/.config/HyprV/waybar/scripts/update1-sys update",
         "interval": 300,
         "tooltip": true
+    },
+*/
+
+    "custom/updates": {
+	    "format": " {}",
+	    "exec": "checkupdates | wc -l",
+	    "exec-if": "[[ $(checkupdates | wc -l) -gt 0 ]]",
+	    "interval": 15,
+	    "on-click": "if command -v paru &> /dev/null; then kitty -T update paru -Syu; else kitty -T update yay -Syu; fi && notify-send 'The system has been updated'",
+	    "tooltip": true,
+	    "tooltip-format": "Left Click: Update System\nArch Linux Only",
     },
 
     "hyprland/language": {
