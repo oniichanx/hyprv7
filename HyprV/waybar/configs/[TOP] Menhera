@@ -282,7 +282,7 @@
         "interval": 30,
         "format": " {}",
         "keyboard-name": "gtech-atk68",
-        "on-click": "~/.config/HyprV/hyprv_util swkb",
+        "on-click": "~/.config/HyprV/hypr/scripts/LanguageChange.sh swkb",
         "signal": 8
     },
 
