@@ -319,6 +319,12 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
 	ln -sf ~/.config/HyprV/wlogout/layout ~/.config/wlogout/layout
 	#ln -sf ~/.config/HyprV/rofi/config ~/.config/rofi/config
 	#ln -sf ~/.config/HyprV/rofi/style/v4-style-dark.css ~/.config/rofi/style.css
+	ln -sf ~/.config/HyprV/waybar/Modules ~/.config/waybar/Modules
+	ln -sf ~/.config/HyprV/waybar/ModulesCustom ~/.config/waybar/ModulesCustom
+	ln -sf ~/.config/HyprV/waybar/ModulesGroups ~/.config/waybar/ModulesGroups
+	ln -sf ~/.config/HyprV/waybar/ModulesWorkspaces ~/.config/waybar/ModulesWorkspaces
+	ln -sf ~/.config/HyprV/waybar/wallust ~/.config/waybar/wallust
+	ln -sf ~/.config/HyprV/wallust ~/.config/wallust
 
 	# add the Nvidia env file to the config (if needed)
 	if [[ "$ISNVIDIA" == true ]]; then

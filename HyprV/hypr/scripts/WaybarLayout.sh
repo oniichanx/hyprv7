@@ -6,7 +6,7 @@ set -euo pipefail
 IFS=$'\n\t'
 
 # Define directories
-waybar_layouts="$HOME/.config/waybar/configs"
+waybar_layouts="$HOME/.config/HyprV/waybar/configs"
 waybar_config="$HOME/.config/waybar/config"
 SCRIPTSDIR="$HOME/.config/hypr/scripts"
 rofi_config="$HOME/.config/rofi/config-waybar-layout.rasi"
