@@ -73,7 +73,12 @@ install_stage=(
 	starship
 	papirus-icon-theme
 	ttf-jetbrains-mono-nerd
+  	ttf-droid 
+  	ttf-fira-code
+  	ttf-jetbrains-mono 
 	noto-fonts-emoji
+  	adobe-source-code-pro-fonts 
+  	otf-font-awesome 
 	lxappearance
 	xfce4-settings
 	nwg-look
