@@ -41,7 +41,6 @@ nvidia_stage=(
 #the main packages
 install_stage=(
 	kitty
-	foot
 	mako
 	waybar
 	swww
@@ -51,6 +50,7 @@ install_stage=(
 	imagemagick
 	bibata-cursor-theme-bin
 	wlogout
+	xdg-desktop-portal-hyprland
 	swappy
 	grim
 	slurp
