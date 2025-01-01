@@ -51,7 +51,6 @@ install_stage=(
 	imagemagick
 	bibata-cursor-theme-bin
 	wlogout
-	xdg-desktop-portal-hyprland
 	swappy
 	grim
 	slurp
