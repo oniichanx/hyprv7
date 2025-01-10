@@ -113,6 +113,22 @@ tooltip {
   transition: none;
 }
 
+#custom-mic {
+  background: @color1;
+  padding: 0px 10;
+  margin: 7px 5px;
+  border-radius: 5px;
+}
+
+#custom-mic {
+  margin-right: 5px;
+}
+
+#custom-mic.used {
+  background: #ed192d;
+  color: @color7;
+}
+
 /* MyHyprv and Wofi Launcher */
 #custom-myhyprv {
   background: @color1;    /* Using @color1 */
