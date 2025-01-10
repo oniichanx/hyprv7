@@ -15,11 +15,6 @@ restart_waybar() {
 
 # Main script
 
-if [[ "$1" == "vswitch" ]]; then
-    restart_waybar
-elif [[ "$1" == "setbg" ]]; then
-    restart_waybar
-elif [[ "$1" == "swkb" ]]; then
+if [[ "$1" == "swkb" ]]; then
     switch_keyboard
-    restart_waybar
 fi
