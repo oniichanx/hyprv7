@@ -237,9 +237,10 @@
     "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown"
   },
 
-  "custom/light_dark":{
-    "format": "󰐾",
-    "on-click":"~/.config/HyprV/hypr/scripts/Light_Dark.sh"
+  "custom/light_dark": {  
+    "format": "󰐾",  
+    "on-click": "~/.config/HyprV/hypr/scripts/Light_Dark.sh",  
+    "tooltip-format": "Default Keybinds\nSUPER + Q = Start Kitty\nSUPER + F4 = Close Window\nSUPER + L = Lock Screen\nSUPER + M = Logout menu\nSUPER + E = File Manager\nSUPER + V = Toggle Float\nSUPER + SPACE = App Launcher\nSUPER + S = Screenshot\nSUPER + T = Switch Waybar Layout\nSUPER + Y = Switch Waybar Styles\nSUPER + U = WallpaperSelect\nALT + V = Open clipboard manager"  
   },
 
    "custom/spotify": {
