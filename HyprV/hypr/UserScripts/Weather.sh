@@ -1,5 +1,5 @@
 #!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
+# /* ---- 💫 https://github.com/oniichanx 💫 ---- */  ##
 # weather info from wttr. https://github.com/chubin/wttr.in
 # Remember to add city 
 

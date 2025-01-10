@@ -1,5 +1,5 @@
 #!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
+# /* ---- 💫 https://github.com/oniichanx 💫 ---- */  ##
 
 # Modified version of Refresh.sh but waybar wont refresh
 # Used by automatic wallpaper change
