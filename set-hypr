@@ -46,10 +46,12 @@ install_stage=(
 	swww
 	swaylock-effects
 	wallust
+	yad
 	rofi-wayland
 	imagemagick
 	bibata-cursor-theme-bin
 	wlogout
+	xdg-desktop-portal-hyprland
 	swappy
 	grim
 	slurp

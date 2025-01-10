@@ -104,7 +104,7 @@ tooltip {
   border-radius: 5px;
 }
 
-#custom-launch_wofi {
+#custom-launch_rofi {
   background: @bg1;
   color: @text;
   padding: 0px 10px;
