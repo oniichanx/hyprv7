@@ -1,3 +1,5 @@
+//* ---- 💫 https://github.com/oniichanx 💫 ---- *///* Waybar Modules *//* NOTE: hyprland-workspaces, Custom Modules & Groups on a separate files */
+
 {
   //"layer": "top",
   "position": "top",
