@@ -1,5 +1,5 @@
 {
-  "layer": "top",
+  //"layer": "top",
   "position": "top",
   //"mod": "dock",
   "exclusive": true,
@@ -10,8 +10,8 @@
   "modules-right": [
     //"hyprland/window",
     "hyprland/language",
-    "pulseaudio",
     "battery",
+    "pulseaudio",
     "pulseaudio#microphone",
     "custom/power",
     "custom/light_dark", 
@@ -192,7 +192,7 @@
     "tooltip": false,
     "format-muted": " Muted",
     "on-click": "~/.config/HyprV/hypr/scripts/Volume.sh --toggle",
-    "on-click-right": "pavucontrol",
+    "on-click-right": "pavucontrol -t 3",
     "on-scroll-up": "~/.config/HyprV/hypr/scripts/Volume.sh --inc",
     "on-scroll-down": "~/.config/HyprV/hypr/scripts/Volume.sh --dec",
     "scroll-step": 5,
@@ -204,7 +204,9 @@
         "portable": "",
         "car": "",
         "default": ["", "", ""]
-        }
+        },
+    "tooltip": true,
+    "tooltip-format": "{icon} {desc} | {volume}%",
   },
 
   "pulseaudio#microphone": {
@@ -212,9 +214,10 @@
     "format-source": " {volume}%",
     "format-source-muted": "  Muted",
     "on-click": "~/.config/HyprV/hypr/scripts/Volume.sh --toggle-mic",
-    "on-click-right": "pavucontrol",
+    "on-click-right": "pavucontrol -t 4",
     "on-scroll-up": "~/.config/HyprV/hypr/scripts/Volume.sh --mic-inc",
     "on-scroll-down": "~/.config/HyprV/hypr/scripts/Volume.sh --mic-dec",
+    "tooltip-format": "{source_desc} | {source_volume}%",
     "scroll-step": 5
   },
 
