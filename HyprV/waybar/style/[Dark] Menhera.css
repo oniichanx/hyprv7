@@ -96,6 +96,22 @@ tooltip {
     transition: none;
 }
 
+#custom-mic {
+  background: @bg1;
+  padding: 0px 10;
+  margin: 7px 5px;
+  border-radius: 5px;
+}
+
+#custom-mic {
+  margin-right: 5px;
+}
+
+#custom-mic.used {
+  background: @bg1;
+  color: @text1;
+}
+
 #custom-myhyprv {
   background: @bg1;
   color: @text1;
