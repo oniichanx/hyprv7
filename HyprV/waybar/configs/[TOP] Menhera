@@ -14,6 +14,7 @@
 
   "modules-right": [
     //"hyprland/window",
+    "custom/mic",
     "hyprland/language",
     "battery",
     "pulseaudio",
@@ -240,7 +241,15 @@
   "custom/light_dark": {
     "format": "󰐾",
     "on-click": "~/.config/HyprV/hypr/scripts/Light_Dark.sh",
-    "tooltip-format": "Default Keybinds\nSUPER + Q = Start Kitty\nSUPER + F4 = Close Window\nSUPER + L = Lock Screen\nSUPER + M = Logout menu\nSUPER + E = File Manager\nSUPER + V = Toggle Float\nSUPER + SPACE = App Launcher\nSUPER + S = Screenshot\nSUPER + T = Switch Waybar Layout\nSUPER + Y = Switch Waybar Styles\nSUPER + U = WallpaperSelect\nALT + V = Open clipboard manager"
+    "tooltip-format": "Default Keybinds\nSUPER + Q = Start Kitty\nSUPER + F4 = Close Window\nSUPER + L = Lock Screen\nSUPER + M = Logout menu\nSUPER + E = File Manager\nSUPER + V = Toggle Float\nSUPER + SPACE = App Launcher\nSUPER + S = Screenshot\nSUPER + T = Switch WaybarLayout\nSUPER + Y = Switch WaybarStyles\nSUPER + U = Wallpaper Select\nSUPER + F = Fake Fullscreen\nALT + V = Open clipboard manager"
+  },
+
+  "custom/mic": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": 1,
+    "exec": "echo '{ \"text\": \"\", \"class\": \"used\" }'",
+    "exec-if": "~/.config/HyprV/hypr/UserScripts/cam.sh"
   },
 
   "custom/spotify": {
