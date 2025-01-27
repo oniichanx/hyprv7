@@ -24,7 +24,7 @@ pallete_light="light16"
 pkill swaybg
 
 # Initialize swww if needed
-swww query || swww-daemon
+swww query || swww-daemon --format xrgb
 
 # Set swww options
 swww="swww img"
@@ -48,7 +48,7 @@ update_theme_mode() {
 
 # Function to notify user
 notify_user() {
-    notify-send -u low -i "$notif" "Switching to $1 mode"
+    notify-send -u low -i "$notif" " Switching to" " $1 mode"
 }
 
 # Use sed to replace the palette setting in the wallust config file
@@ -82,33 +82,34 @@ notify_user "$next_mode"
 # swaync color change
 if [ "$next_mode" = "Dark" ]; then
     sed -i '/@define-color noti-bg/s/rgba([0-9]*,\s*[0-9]*,\s*[0-9]*,\s*[0-9.]*);/rgba(0, 0, 0, 0.8);/' "${swaync_style}"
-	sed -i '/@define-color noti-bg-alt/s/#.*;/#111111;/' "${swaync_style}"
+    sed -i '/@define-color noti-bg-alt/s/#.*;/#111111;/' "${swaync_style}"
 else
     sed -i '/@define-color noti-bg/s/rgba([0-9]*,\s*[0-9]*,\s*[0-9]*,\s*[0-9.]*);/rgba(255, 255, 255, 0.9);/' "${swaync_style}"
-	sed -i '/@define-color noti-bg-alt/s/#.*;/#F0F0F0;/' "${swaync_style}"
+    sed -i '/@define-color noti-bg-alt/s/#.*;/#F0F0F0;/' "${swaync_style}"
 fi
 
 # ags color change
 if [ "$next_mode" = "Dark" ]; then
     sed -i '/@define-color noti-bg/s/rgba([0-9]*,\s*[0-9]*,\s*[0-9]*,\s*[0-9.]*);/rgba(0, 0, 0, 0.4);/' "${ags_style}"
-	sed -i '/@define-color text-color/s/rgba([0-9]*,\s*[0-9]*,\s*[0-9]*,\s*[0-9.]*);/rgba(255, 255, 255, 0.7);/' "${ags_style}"
-	sed -i '/@define-color noti-bg-alt/s/#.*;/#111111;/' "${ags_style}"
+    sed -i '/@define-color text-color/s/rgba([0-9]*,\s*[0-9]*,\s*[0-9]*,\s*[0-9.]*);/rgba(255, 255, 255, 0.7);/' "${ags_style}"
+    sed -i '/@define-color noti-bg-alt/s/#.*;/#111111;/' "${ags_style}"
 else
     sed -i '/@define-color noti-bg/s/rgba([0-9]*,\s*[0-9]*,\s*[0-9]*,\s*[0-9.]*);/rgba(255, 255, 255, 0.4);/' "${ags_style}"
     sed -i '/@define-color text-color/s/rgba([0-9]*,\s*[0-9]*,\s*[0-9]*,\s*[0-9.]*);/rgba(0, 0, 0, 0.7);/' "${ags_style}"
-	sed -i '/@define-color noti-bg-alt/s/#.*;/#F0F0F0;/' "${ags_style}"
+    sed -i '/@define-color noti-bg-alt/s/#.*;/#F0F0F0;/' "${ags_style}"
 fi
 
 # kitty background color change
 if [ "$next_mode" = "Dark" ]; then
     sed -i '/^foreground /s/^foreground .*/foreground #dddddd/' "${kitty_conf}"
-	sed -i '/^background /s/^background .*/background #000000/' "${kitty_conf}"
-	sed -i '/^cursor /s/^cursor .*/cursor #dddddd/' "${kitty_conf}"
+    sed -i '/^background /s/^background .*/background #000000/' "${kitty_conf}"
+    sed -i '/^cursor /s/^cursor .*/cursor #dddddd/' "${kitty_conf}"
 else
-	sed -i '/^foreground /s/^foreground .*/foreground #000000/' "${kitty_conf}"
-	sed -i '/^background /s/^background .*/background #dddddd/' "${kitty_conf}"
-	sed -i '/^cursor /s/^cursor .*/cursor #000000/' "${kitty_conf}"
+    sed -i '/^foreground /s/^foreground .*/foreground #000000/' "${kitty_conf}"
+    sed -i '/^background /s/^background .*/background #dddddd/' "${kitty_conf}"
+    sed -i '/^cursor /s/^cursor .*/cursor #000000/' "${kitty_conf}"
 fi
+
 for pid in $(pidof kitty); do
     kill -SIGUSR1 "$pid"
 done
@@ -127,13 +128,13 @@ $swww "${next_wallpaper}" $effect
 
 # Set Kvantum Manager theme & QT5/QT6 settings
 if [ "$next_mode" = "Dark" ]; then
-    kvantum_theme="Catppuccin-Mocha"
-    qt5ct_color_scheme="$HOME/.config/qt5ct/colors/Catppuccin-Mocha.conf"
-    qt6ct_color_scheme="$HOME/.config/qt6ct/colors/Catppuccin-Mocha.conf"
+    kvantum_theme="catppuccin-mocha-blue"
+    #qt5ct_color_scheme="$HOME/.config/qt5ct/colors/Catppuccin-Mocha.conf"
+    #qt6ct_color_scheme="$HOME/.config/qt6ct/colors/Catppuccin-Mocha.conf"
 else
-    kvantum_theme="Catppuccin-Latte"
-    qt5ct_color_scheme="$HOME/.config/qt5ct/colors/Catppuccin-Latte.conf"
-    qt6ct_color_scheme="$HOME/.config/qt6ct/colors/Catppuccin-Latte.conf"
+    kvantum_theme="catppuccin-latte-blue"
+    #qt5ct_color_scheme="$HOME/.config/qt5ct/colors/Catppuccin-Latte.conf"
+    #qt6ct_color_scheme="$HOME/.config/qt6ct/colors/Catppuccin-Latte.conf"
 fi
 
 sed -i "s|^color_scheme_path=.*$|color_scheme_path=$qt5ct_color_scheme|" "$HOME/.config/qt5ct/qt5ct.conf"
@@ -229,15 +230,22 @@ set_custom_gtk_theme "$next_mode"
 # Update theme mode for the next cycle
 update_theme_mode
 
-sleep 0.5
-# Run remaining scripts
-${SCRIPTSDIR}/WallustSwww.sh
-sleep 1
+
+${SCRIPTSDIR}/WallustSwww.sh &&
+
+# some process to kill
+_ps=(waybar rofi swaync ags swaybg)
+for _prs in "${_ps[@]}"; do
+    if pidof "${_prs}" >/dev/null; then
+        pkill "${_prs}"
+    fi
+done
+
+sleep 2
 ${SCRIPTSDIR}/Refresh.sh 
 
 sleep 0.3
-# Display notifications for theme and icon changes
-notify-send -u normal -i "$notif" "Themes in $next_mode Mode"
+# Display notifications for theme and icon changes 
+notify-send -u normal -i "$notif" " Themes switched to:" " $next_mode Mode"
 
 exit 0
-

@@ -1,6 +1,6 @@
 /* ---- 💫 https://github.com/oniichanx 💫 ---- */
 
-// ### DEFAULT v4  - Top ### //
+// ### DEFAULT v5 - Top ### //
 {
 "include": [
   "$HOME/.config/waybar/Modules",
@@ -26,15 +26,14 @@
 	"group/mobo_drawer",
 	"custom/separator#line",
 	"custom/weather",
+	"custom/separator#blank",
+	"custom/cava_mviz",
 	],
 
 "modules-center": [
 	"custom/swaync",
-	"custom/cava_mviz",
 	"custom/separator#dot-line",
-	"clock",
-	"custom/separator#line",
-	"hyprland/workspaces#kanji",
+	"hyprland/workspaces#rw",
 	"custom/separator#dot-line",
 	"idle_inhibitor",	
 	"custom/hint",	
@@ -45,9 +44,10 @@
 	"group/connections",
 	"custom/separator#line",
 	"tray",
-	"mpris", 
+	"mpris",
+	"clock", 
 	"group/audio",
 	"custom/separator#dot-line",
 	"group/status",
 	],
-}
+} 
