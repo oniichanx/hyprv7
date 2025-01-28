@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Load configuration from hyprv.conf
-. ~/.config/HyprV/hyprv.conf
+. ~/.config/HyprV/hypr/Langswitch.conf
 
 switch_keyboard() {
     hyprctl switchxkblayout $SET_KB next
