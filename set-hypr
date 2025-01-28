@@ -310,6 +310,8 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
 	ln -sf ~/.config/HyprV/waybar/configs/[TOP]\ Simple ~/.config/waybar/config
 	ln -sf ~/.config/HyprV/waybar/style/[Colored]\ Translucent.css ~/.config/waybar/style.css
 	ln -sf ~/.config/HyprV/wlogout/layout ~/.config/wlogout/layout
+	ln -sf ~/.config/HyprV/wlogout/icons ~/.config/wlogout/icons
+	ln -sf ~/.config/HyprV/wlogout/style.css ~/.config/wlogout/style.css
 	#ln -sf ~/.config/HyprV/rofi/config ~/.config/rofi/config
 	#ln -sf ~/.config/HyprV/rofi/style/v4-style-dark.css ~/.config/rofi/style.css
 	ln -sf ~/.config/HyprV/waybar/Modules ~/.config/waybar/Modules
