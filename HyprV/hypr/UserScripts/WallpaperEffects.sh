@@ -9,7 +9,7 @@ SCRIPTSDIR="$HOME/.config/hypr/scripts"
 focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{print name}')
 
 # Directory for swaync
-iDIR="$HOME/.config/swaync/images"
+iDIR="$HOME/.config/HyprV/mako/icons"
 
 # swww transition config
 FPS=60

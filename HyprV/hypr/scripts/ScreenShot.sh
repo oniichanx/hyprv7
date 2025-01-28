@@ -2,7 +2,7 @@
 # /* ---- 💫 https://github.com/oniichanx 💫 ---- */  ##
 # Screenshots scripts
 
-iDIR="$HOME/.config/swaync/icons"
+iDIR="$HOME/.config/HyprV/mako/icons"
 sDIR="$HOME/.config/hypr/scripts"
 
 time=$(date "+%d-%b_%H-%M-%S")
