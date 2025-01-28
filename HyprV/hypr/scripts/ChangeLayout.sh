@@ -2,7 +2,7 @@
 # /* ---- 💫 https://github.com/oniichanx 💫 ---- */  ##
 # for changing Hyprland Layouts (Master or Dwindle) on the fly
 
-notif="$HOME/.config/swaync/images/bell.png"
+notif="$HOME/.config/HyprV/mako/icons/bell.png"
 
 LAYOUT=$(hyprctl -j getoption general:layout | jq '.str' | sed 's/"//g')
 

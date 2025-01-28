@@ -2,7 +2,7 @@
 # /* ---- 💫 https://github.com/oniichanx 💫 ---- */  ##
 # Game Mode. Turning off all animations
 
-notif="$HOME/.config/swaync/images/bell.png"
+notif="$HOME/.config/HyprV/mako/icons/bell.png"
 SCRIPTSDIR="$HOME/.config/hypr/scripts"
 HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 
