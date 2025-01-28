@@ -2,7 +2,7 @@
 # /* ---- 💫 https://github.com/oniichanx 💫 ---- */  ##
 # Script for keyboard backlights (if supported) using brightnessctl
 
-iDIR="$HOME/.config/HyprV/hypr/icons"
+iDIR="$HOME/.config/HyprV/mako/icons"
 
 # Get keyboard brightness
 get_kbd_backlight() {
