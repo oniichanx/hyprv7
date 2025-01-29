@@ -1,4 +1,4 @@
-/* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
+/* ----------- 💫 https://github.com/oniichanx 💫 -------- */
 /* wallust-wlogout */
 
 /* Importing wallust colors */
@@ -6,8 +6,8 @@
 
 window {
     font-family: Fira Code Medium;
-    font-size: 16pt;
-    color: #cdd6f4; /* text */
+    font-size: 12pt;
+    color: @background; /* text */
     background-color: rgba(30, 30, 46, 0.6);
 }
 
@@ -15,11 +15,12 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30%;
-    background-color: rgba(200, 220, 255, 0);
+    background-color: #11111B;
     animation: gradient_f 10s ease-in infinite;
-    border-radius: 40px;
+    border-radius: 40px; /* Increased border radius for a more rounded look */
     margin: 10px;
     padding: 10px;
+    
 }
 
 button:focus {
@@ -34,8 +35,8 @@ button:hover {
     background-size: 50%;
     margin: 30px;
     border-radius: 80px;
-	box-shadow: 0 0 30px @color7;
-	
+    box-shadow: 0 0 30px @color7;
+    
 }
 
 /* Adjust the size of the icon or content inside the button */
