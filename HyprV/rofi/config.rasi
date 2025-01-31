@@ -5,13 +5,13 @@
 
 /* ---- Window ---- */
 window {
-    width:  50%;
+    width:	50%;
 }
 /* ---- Listview ---- */
 listview {
   columns: 5;
   lines: 5;
-  fixed-height: true;
+  fixed-height:	true;
 }
 
 /* ---- Element ---- */

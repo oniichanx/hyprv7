@@ -1,28 +1,31 @@
+ /* ---- 💫 https://github.com/oniichanx 💫 ---- */  
+ /* wallust template - colors-rofi */
+
 * {
-active-background: #101C2F;
-active-foreground: #D6CBD5;
-normal-background: #030508;
-normal-foreground: #D6CBD5;
-urgent-background: #2B7F48;
-urgent-foreground: #D6CBD5;
+active-background: #25171C;
+active-foreground: #E6DFDF;
+normal-background: #141112;
+normal-foreground: #E6DFDF;
+urgent-background: #B24143;
+urgent-foreground: #E6DFDF;
 
-alternate-active-background: #11606B;
-alternate-active-foreground: #D6CBD5;
-alternate-normal-background: #030508;
-alternate-normal-foreground: #D6CBD5;
-alternate-urgent-background: #030508;
-alternate-urgent-foreground: #D6CBD5;
+alternate-active-background: #756566;
+alternate-active-foreground: #E6DFDF;
+alternate-normal-background: #141112;
+alternate-normal-foreground: #E6DFDF;
+alternate-urgent-background: #141112;
+alternate-urgent-foreground: #E6DFDF;
 
-selected-active-background: #101C2F;
-selected-active-foreground: #D6CBD5;
-selected-normal-background: #BCADBB;
-selected-normal-foreground: #D6CBD5;
-selected-urgent-background: #2B7F48;
-selected-urgent-foreground: #D6CBD5;
+selected-active-background: #25171C;
+selected-active-foreground: #E6DFDF;
+selected-normal-background: #D4C9C9;
+selected-normal-foreground: #E6DFDF;
+selected-urgent-background: #B24143;
+selected-urgent-foreground: #E6DFDF;
 
-background-color: #030508;
+background-color: #141112;
 background: rgba(0,0,0,0.7);
-foreground: #BCADBB;
-border-color: #101C2F;
+foreground: #D4C9C9;
+border-color: #25171C;
 }
 

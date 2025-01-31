@@ -1,18 +1,18 @@
 /* ---- 💫 https://github.com/oniichanx 💫 ---- */
 /* Catppuccin Latte - Wallust - v2 */
 
-@define-color white         #F2F2F2;
-@define-color black         #000000;
-@define-color text          #FFFFFF;
-@define-color lightgray     #686868;
-@define-color darkgray      #353535;
+@define-color white      	#F2F2F2;
+@define-color black      	#000000;
+@define-color text       	#FFFFFF;
+@define-color lightgray  	#686868;
+@define-color darkgray   	#353535;
 
-@define-color transparent   rgba(1, 1, 1, 0.5);
-@define-color teal-trans    rgba(1, 117, 84, 0.5);
-@define-color cyan          rgba(53, 140, 169, 1);
+@define-color transparent	rgba(1, 1, 1, 0.5);
+@define-color teal-trans	rgba(1, 117, 84, 0.5);
+@define-color cyan			rgba(53, 140, 169, 1);
 
 @define-color background-module     @background;
-@define-color background-module2    @color11;
+@define-color background-module2	@color11;
 @define-color border-color          @color12;
 @define-color button-color          @color10;
 @define-color button-hover          @color13;
@@ -23,7 +23,7 @@
 * {
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    min-height: 0;  
+	min-height: 0;  
     /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
     font-size: 97%;
     font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
@@ -32,10 +32,10 @@
 window#waybar {
     background: @background;
     border-radius:15px;
-    padding-top: 2px;
-    padding-bottom: 0px;
-    padding-right: 4px;
-    padding-left: 4px;
+	padding-top: 2px;
+	padding-bottom: 0px;
+	padding-right: 4px;
+	padding-left: 4px;
 }
 
 tooltip {
@@ -54,11 +54,13 @@ tooltip {
     font-weight: bold;
     font-style: normal;
     opacity: 0.8;
-}   
+}
+
+#taskbar button,   
 #workspaces button {
     color: @foreground;
     box-shadow: none;
-    text-shadow: none;
+	text-shadow: none;
     border-radius: 30px;
     padding-left: 4px;
     padding-right: 4px;
@@ -66,6 +68,7 @@ tooltip {
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
+#taskbar button.active,
 #workspaces button.active {
     color: #ffd700;
     border-radius: 50%;
@@ -86,26 +89,24 @@ tooltip {
     border-radius: 10px;
 }
 
+#taskbar button:hover,
 #workspaces button:hover {
     color: #ffd700;
     border-radius: 10px;
-    padding-left: 2px;
+ 	padding-left: 2px;
     padding-right: 2px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-}
-
-#clock#2 {
-    color: #efe8f7;
 }
 
 /*-----module groups----*/
 .modules-center {
     background-color: @background-module2;
     border-radius: 10px;
-    border-bottom: 2px solid @border-color;
-    border-right: 1px solid @button-hover;
-    border-left: 1px solid @button-hover;
+    padding: 4px;
+	border-bottom: 2px solid @border-color;
+	border-right: 1px solid @button-hover;
+	border-left: 1px solid @button-hover;
 }
 
 #backlight,
@@ -142,6 +143,7 @@ tooltip {
 #custom-hint,
 #custom-hypridle,
 #custom-menu,
+#custom-playerctl,
 #custom-power_vertical,
 #custom-power,
 #custom-settings,
@@ -161,8 +163,8 @@ tooltip {
 #custom-weather.snowyIcyNight,
 #custom-weather.sunnyDay {
     color: @foreground;
-    padding-right: 6px;
-    padding-left: 6px;;
+	padding-right: 6px;
+	padding-left: 6px;;
 }
 
 #temperature.critical {
@@ -175,21 +177,7 @@ tooltip {
     }
 }
 
-#taskbar button.active {
-    background-color: rgb(47, 46, 46);
-    padding-left: 12px;
-    padding-right: 12px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-}
-
-#taskbar button:hover {
-    padding-left: 3px;
-    padding-right: 3px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-}
-
+#backlight-slider slider,
 #pulseaudio-slider slider {
     min-width: 0px;
     min-height: 0px;
@@ -199,6 +187,7 @@ tooltip {
     box-shadow: none;
 }
 
+#backlight-slider trough,
 #pulseaudio-slider trough {
     min-width: 80px;
     min-height: 5px;
@@ -206,36 +195,16 @@ tooltip {
     background-color: #22252a;
 }
 
+#backlight-slider highlight,
 #pulseaudio-slider highlight {
     min-height: 10px;
     border-radius: 5px;
     background-color: #ba5663;
 }
 
-#backlight-slider slider {
-    min-width: 0px;
-    min-height: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
-}
-
-#backlight-slider trough {
-    min-width: 80px;
-    min-height: 10px;
-    border-radius: 5px;
-    background-color: #22252a;
-}
-
-#backlight-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: #ba5663;
-}
 #pulseaudio-slider,
 #pulseaudio {
-    color: @color13;
+	color: @color13;
 }
 
 #pulseaudio.muted {
@@ -243,19 +212,19 @@ tooltip {
 }
 
 #memory {
-    color: @sapphire;
+	color: @sapphire;
 }
 
 #cpu {
-    color: @mauve;
+	color: @mauve;
 }
 
 #battery {
-    color: @rosewater;
+	color: @rosewater;
 }
 
 #disk {
-    color: @sky;
+	color: @sky;
 }
 
 #temperature.critical {
@@ -263,51 +232,12 @@ tooltip {
 }
 
 #battery.critical:not(.charging) {
-    color: #f53c3c;
-    animation-name: blink;
-    animation-duration: 3.0s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#pulseaudio-slider slider {
-    min-width: 0px;
-    min-height: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
-}
-
-#pulseaudio-slider trough {
-    min-width: 80px;
-    min-height: 5px;
-    border-radius: 5px;
-}
-
-#pulseaudio-slider highlight {
-    min-height: 10px;
-    border-radius: 5px;
-}
-#backlight-slider slider {
-    min-width: 0px;
-    min-height: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
-}
-
-#backlight-slider trough {
-    min-width: 80px;
-    min-height: 10px;
-    border-radius: 5px;
-}
-
-#backlight-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
+	color: #f53c3c;
+	animation-name: blink;
+	animation-duration: 3.0s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 #custom-hypridle,
@@ -319,13 +249,14 @@ tooltip {
 /*-----Indicators----*/
 #custom-hypridle.notactive,
 #idle_inhibitor.activated {
-    color: #39FF14;
+	color: #39FF14;
 }
 
 #clock {
-    color: @sapphire;
+	color: @foreground;
     border-radius: 15px;
 }
+
 #custom-updates {
     color: @yellow;
 }
