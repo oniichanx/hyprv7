@@ -362,6 +362,26 @@ if [[ $STAR == "Y" || $STAR == "y" ]]; then
 	cp Extras/starship.toml ~/.config/
 fi
 
+# Set wallpaper using swww (added code)
+echo -e "$CAC - Would you like to set the Wallpaper? (y/n)"
+read -r SET_WALLPAPER
+
+if [[ "$SET_WALLPAPER" == "Y" || "$SET_WALLPAPER" == "y" ]]; then
+    echo -e "$CNT - Setting the wallpaper using swww..."
+    wallpaper="$HOME/.config/HyprV/hypr/wallpaper_effects/.wallpaper_modified"
+    swww="swww img"
+    
+    # Check if wallpaper file exists before applying it
+    if [[ -f "$wallpaper" ]]; then
+        $swww "$wallpaper"
+        echo -e "$COK - Wallpaper set successfully."
+    else
+        echo -e "$CER - Wallpaper file not found. Please check the path and try again."
+    fi
+else
+    echo -e "$CNT - Wallpaper setup skipped."
+fi
+
 ### Set Default Browser ###
 echo -e "$CAC - Choose a default browser:"
 echo -e "1. Librewolf"
