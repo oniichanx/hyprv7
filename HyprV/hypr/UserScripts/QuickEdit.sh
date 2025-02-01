@@ -9,11 +9,13 @@ tty=kitty
 # Paths to configuration directories
 configs="$HOME/.config/hypr/configs"
 UserConfigs="$HOME/.config/hypr/UserConfigs"
+UserSettings="$HOME/.config/hypr/"
 
 # Function to display the menu options
 menu() {
     cat <<EOF
 1. View / Edit  Default-Settings
+1. View / Edit  User-Settings
 2. View / Edit  Default-Keybinds
 3. View / Edit  Decorations & Animations
 4. View / Edit  Workspace-Rules
@@ -28,9 +30,10 @@ main() {
     # Map choices to corresponding files
     case $choice in
         1) file="$UserConfigs/Settings.conf" ;;
-        2) file="$UserConfigs/KeyBinds.conf" ;;
-        3) file="$UserConfigs/UserDecorAnimations.conf" ;;
-        4) file="$UserConfigs/WindowRules.conf" ;;
+        2) file="$UserSettings/hyprland.conf" ;;
+        3) file="$UserConfigs/KeyBinds.conf" ;;
+        4) file="$UserConfigs/UserDecorAnimations.conf" ;;
+        5) file="$UserConfigs/WindowRules.conf" ;;
         *) return ;;  # Do nothing for invalid choices
     esac
 
