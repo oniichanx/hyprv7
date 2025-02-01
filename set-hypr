@@ -318,8 +318,10 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
 	ln -sf ~/.config/HyprV/waybar/ModulesCustom ~/.config/waybar/ModulesCustom
 	ln -sf ~/.config/HyprV/waybar/ModulesGroups ~/.config/waybar/ModulesGroups
 	ln -sf ~/.config/HyprV/waybar/ModulesWorkspaces ~/.config/waybar/ModulesWorkspaces
+	ln -sf ~/.config/HyprV/waybar/ModulesVertical ~/.config/waybar/ModulesVertical
 	ln -sf ~/.config/HyprV/waybar/wallust ~/.config/waybar/wallust
 	ln -sf ~/.config/HyprV/wallust ~/.config/wallust
+	ln -sf ~/.config/HyprV/waybar/style ~/.config/waybar/style
 
 	# add the Nvidia env file to the config (if needed)
 	if [[ "$ISNVIDIA" == true ]]; then
