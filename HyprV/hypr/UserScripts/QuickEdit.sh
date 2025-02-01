@@ -13,17 +13,11 @@ UserConfigs="$HOME/.config/hypr/UserConfigs"
 # Function to display the menu options
 menu() {
     cat <<EOF
-1. View / Edit  Env-variables
-2. View / Edit  Window-Rules
-3. View / Edit  Startup_Apps
-4. View / Edit  User-Keybinds
-5. View / Edit  Monitors
-6. View / Edit  Laptop-Keybinds
-7. View / Edit  User-Settings
-8. View / Edit  Decorations & Animations
-9. View / Edit  Workspace-Rules
-10. View / Edit  Default-Settings
-11. View / Edit  Default-Keybinds
+1. View / Edit  Default-Settings
+2. View / Edit  Default-Keybinds
+3. View / Edit  Decorations & Animations
+4. View / Edit  Workspace-Rules
+
 EOF
 }
 
@@ -33,17 +27,10 @@ main() {
     
     # Map choices to corresponding files
     case $choice in
-        1) file="$UserConfigs/ENVariables.conf" ;;
-        2) file="$UserConfigs/WindowRules.conf" ;;
-        3) file="$UserConfigs/Startup_Apps.conf" ;;
-        4) file="$UserConfigs/UserKeybinds.conf" ;;
-        5) file="$UserConfigs/Monitors.conf" ;;
-        6) file="$UserConfigs/Laptops.conf" ;;
-        7) file="$UserConfigs/UserSettings.conf" ;;
-        8) file="$UserConfigs/UserDecorAnimations.conf" ;;
-        9) file="$UserConfigs/WorkspaceRules.conf" ;;
-        10) file="$configs/Settings.conf" ;;
-        11) file="$configs/Keybinds.conf" ;;
+        1) file="$UserConfigs/Settings.conf" ;;
+        2) file="$UserConfigs/KeyBinds.conf" ;;
+        3) file="$UserConfigs/UserDecorAnimations.conf" ;;
+        4) file="$UserConfigs/WindowRules.conf" ;;
         *) return ;;  # Do nothing for invalid choices
     esac
 
