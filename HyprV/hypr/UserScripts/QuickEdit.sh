@@ -15,10 +15,10 @@ UserSettings="$HOME/.config/hypr/"
 menu() {
     cat <<EOF
 1. View / Edit  Default-Settings
-1. View / Edit  User-Settings
-2. View / Edit  Default-Keybinds
-3. View / Edit  Decorations & Animations
-4. View / Edit  Workspace-Rules
+2. View / Edit  User-Settings
+3. View / Edit  Default-Keybinds
+4. View / Edit  Decorations & Animations
+5. View / Edit  Workspace-Rules
 
 EOF
 }
