@@ -365,9 +365,7 @@ if [[ $STAR == "Y" || $STAR == "y" ]]; then
 fi
 
 # Set wallpaper using swww (added code)
-echo -e "$CAC - Would you like to set the Wallpaper? (y/n)"
-read -r SET_WALLPAPER
-
+read -rep $'[\e[1;33mACTION\e[0m] - Would you like to activate the Wallpaper? (y,n) ' SET_WALLPAPER
 if [[ "$SET_WALLPAPER" == "Y" || "$SET_WALLPAPER" == "y" ]]; then
     echo -e "$CNT - Setting the wallpaper using swww..."
     wallpaper="$HOME/.config/HyprV/hypr/wallpaper_effects/.wallpaper_modified"
