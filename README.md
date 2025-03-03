@@ -594,9 +594,24 @@ to this one
 </details>
 
 <details>
-  <summary><strong> How to Single GPU Passthrough? </strong></summary>
+  <summary><strong> How to reroute permanently a microphone to make it mono? on PIPEWIRE </strong></summary>
   
-- #### ([Single GPU Passthrough Link](https://oniichanx.github.io/Windows-10-11-Single-GPU-Passthrough/))
+```
+pw-dump | grep alsa_input
+```
+```
+mkdir -p ~/.config/pipewire/pipewire.conf.d/
+```
+```
+nano ~/.config/pipewire/pipewire.conf.d/mono-umc22.conf
+```
+```
+systemctl --user restart pipewire
+```
+```
+systemctl --user restart wireplumber
+```
+
 </details>
 
 </details>
