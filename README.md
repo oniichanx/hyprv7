@@ -596,19 +596,19 @@ to this one
 <details>
   <summary><strong> How to reroute permanently a microphone to make it mono? on PIPEWIRE </strong></summary>
 
-This is find alse input or audio interface name  
+- This is find alse input or audio interface name  
 ```
 pw-dump | grep alsa_input
 ```
-Make folder for configs we need to create file
+- Make folder for configs we need to create file
 ```
 mkdir -p ~/.config/pipewire/pipewire.conf.d/
 ```
-Create file config we need to do whatever name want
+- Create file config we need to do whatever name want
 ```
 nano ~/.config/pipewire/pipewire.conf.d/mono-umc22.conf
 ```
-This config need to replace the name of your card in `node.target` by the one that you get when you run `pw-dump | grep alsa_input`
+- This config need to replace the name of your card in `node.target` by the one that you get when you run `pw-dump | grep alsa_input`
 ```
 context.modules = [
     # plenty of existing { ... } blocks, then paste this:
@@ -632,7 +632,7 @@ context.modules = [
     }
 ]
 ```
-Restart pipewire and done
+- Restart pipewire and done
 ```
 systemctl --user restart pipewire wireplumber
 ```
