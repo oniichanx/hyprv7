@@ -596,6 +596,7 @@ to this one
 <details>
   <summary><strong> How to reroute permanently a microphone to make it mono? on PIPEWIRE </strong></summary>
 
+---
 - This is find alse input or audio interface name  
 ```
 pw-dump | grep alsa_input
@@ -632,7 +633,7 @@ context.modules = [
     }
 ]
 ```
-- Restart pipewire and done
+- Restart pipewire and Done
 ```
 systemctl --user restart pipewire wireplumber
 ```
