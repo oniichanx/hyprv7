@@ -620,7 +620,7 @@ context.modules = [
                 node.name = "capture.UR22_Mic"
                 audio.position = [ FL, FR ]
                 stream.dont-remix = true
-                node.target = "alsa_input.usb-Burr-Brown_from_TI_USB_Audio_CO>
+                node.target = "alsa_input.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.analog-stereo-input"
                 node.passive = true
             }
             playback.props = {
