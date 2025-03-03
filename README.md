@@ -1,5 +1,5 @@
-# HyprV4, The script that makes so that you make your life easier.
-## Welcome to HyprV4!
+# HyprV6, The script that makes so that you make your life easier.
+## Welcome to HyprV6!
 ### Purpose:
 
 This script was created for easily install Hyprland, making your life more easy.
@@ -592,4 +592,11 @@ to this one
   
 - #### ([Single GPU Passthrough Link](https://oniichanx.github.io/Windows-10-11-Single-GPU-Passthrough/))
 </details>
+
+<details>
+  <summary><strong> How to Single GPU Passthrough? </strong></summary>
+  
+- #### ([Single GPU Passthrough Link](https://oniichanx.github.io/Windows-10-11-Single-GPU-Passthrough/))
+</details>
+
 </details>
