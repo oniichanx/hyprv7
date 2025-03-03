@@ -605,7 +605,7 @@ pw-dump | grep alsa_input
 ```
 mkdir -p ~/.config/pipewire/pipewire.conf.d/
 ```
-- Create file config we need to do whatever name want
+- Create file config we need to do whatever name your want
 ```
 nano ~/.config/pipewire/pipewire.conf.d/mono-umc22.conf
 ```
@@ -633,10 +633,11 @@ context.modules = [
     }
 ]
 ```
-- Restart pipewire and Done
+- Restart pipewire when restart is done your sure see name `node.description` your set is on `pavucontrol`
 ```
 systemctl --user restart pipewire wireplumber
 ```
+---
 
 </details>
 
