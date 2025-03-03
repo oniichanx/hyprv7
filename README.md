@@ -632,11 +632,9 @@ context.modules = [
     }
 ]
 ```
+Restart pipewire and done
 ```
-systemctl --user restart pipewire
-```
-```
-systemctl --user restart wireplumber
+systemctl --user restart pipewire wireplumber
 ```
 
 </details>
