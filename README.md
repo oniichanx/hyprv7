@@ -606,6 +606,29 @@ mkdir -p ~/.config/pipewire/pipewire.conf.d/
 nano ~/.config/pipewire/pipewire.conf.d/mono-umc22.conf
 ```
 ```
+context.modules = [
+    # plenty of existing { ... } blocks, then paste this:
+    # Alternate microphone-only mono source
+    {   name = libpipewire-module-loopback
+        args = {
+            node.description = "UR22 Microphone"
+            capture.props = {
+                node.name = "capture.UR22_Mic"
+                audio.position = [ FL, FR ]
+                stream.dont-remix = true
+                node.target = "alsa_input.usb-Burr-Brown_from_TI_USB_Audio_CO>
+                node.passive = true
+            }
+            playback.props = {
+                node.name = "capture.UR22_Mic"
+                media.class = "Audio/Source"
+                audio.position = [ MONO ]
+            }
+        }
+    }
+]
+```
+```
 systemctl --user restart pipewire
 ```
 ```
