@@ -11,7 +11,7 @@ if pidof rofi > /dev/null; then
 fi
 
 # Define the config files
-KEYBINDS_CONF="$HOME/.config/hypr/configs/Keybinds.conf"
+KEYBINDS_CONF="$HOME/.config/hypr/UserConfigs/KeyBinds.conf"
 USER_KEYBINDS_CONF="$HOME/.config/hypr/UserConfigs/UserKeybinds.conf"
 LAPTOP_CONF="$HOME/.config/hypr/UserConfigs/Laptop.conf"
 
