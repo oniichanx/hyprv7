@@ -1,31 +1,11 @@
 /* ---- 💫 https://github.com/oniichanx 💫 ---- */
 /* Main Config 1080p */
 
-@import "~/.config/rofi/master-config.rasi" 
+/* ---- Global Configuration Fonts ---- */
+@import "~/.config/rofi/0-shared-fonts.rasi"
 
-/* ---- Window ---- */
-window {
-    width:	50%;
-}
-/* ---- Listview ---- */
-listview {
-  columns: 5;
-  lines: 5;
-  fixed-height:	true;
-}
+/* note: Main themes in ~/.config/rofi/themes */
+/* You can manually change here or you can use rofi theme selector SUPER SHIFT E */
 
-/* ---- Element ---- */
-element {
-  orientation: vertical;
-  padding: 10px 5px 10px 5px;
-  spacing: 6px;
-}
 
-element-icon {
-  size: 3%;
-}
-
-element-text {
-  font: "JetBrainsMono Nerd Font SemiBold 11.5";
-  horizontal-align: 0.5;
-}
+@theme "~/.config/rofi/themes/KooL_style-1-B.rasi"
