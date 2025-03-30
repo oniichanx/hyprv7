@@ -15,11 +15,12 @@ UserSettings="$HOME/.config/hypr/"
 menu() {
     cat <<EOF
 1. View / Edit  Default-Settings
-2. View / Edit  User-Settings
-3. View / Edit  Default-Keybinds
-4. View / Edit  Decorations & Animations
-5. View / Edit  Workspace-Rules
-6. View / Edit  Workspace-Rules-new
+2. View / Edit  Default-Apps
+3. View / Edit  User-Settings
+4. View / Edit  Default-Keybinds
+5. View / Edit  Decorations & Animations
+6. View / Edit  Workspace-Rules
+7. View / Edit  Workspace-Rules-new
 
 EOF
 }
@@ -31,11 +32,12 @@ main() {
     # Map choices to corresponding files
     case $choice in
         1) file="$UserConfigs/Settings.conf" ;;
-        2) file="$UserSettings/hyprland.conf" ;;
-        3) file="$UserConfigs/KeyBinds.conf" ;;
-        4) file="$UserConfigs/UserDecorAnimations.conf" ;;
-        5) file="$UserConfigs/WindowRules.conf" ;;
-        6) file="$UserConfigs/WindowRules-new.conf" ;;
+        2) file="$UserConfigs/Default-Apps.conf" ;;
+        3) file="$UserSettings/hyprland.conf" ;;
+        4) file="$UserConfigs/KeyBinds.conf" ;;
+        5) file="$UserConfigs/UserDecorAnimations.conf" ;;
+        6) file="$UserConfigs/WindowRules.conf" ;;
+        7) file="$UserConfigs/WindowRules-new.conf" ;;
         *) return ;;  # Do nothing for invalid choices
     esac
 
