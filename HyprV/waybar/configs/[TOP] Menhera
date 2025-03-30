@@ -4,6 +4,10 @@
 /* NOTE: hyprland-workspaces, Custom Modules & Groups are in separate files */
 
 {
+"include": [
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  ],
   //"layer": "top",
   "position": "top",
   //"mod": "dock",
