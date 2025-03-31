@@ -9,8 +9,15 @@ configuration {
 }
 
 window {
-  width: 75%;
+  width: 60%;
   height: inherit;
+}
+
+/* ---- Imagebox ---- */
+imagebox {
+  orientation: vertical;
+  children:
+    [ "entry", "listbox"];
 }
 
 /* ---- Mainbox ---- */
@@ -55,15 +62,13 @@ element selected.normal {
 }
 
 element-icon {
-    text-color:                  inherit;
-    size:                        10%;
-    margin:                      -30px;
-    cursor:                      inherit;
+  text-color: inherit;
+  size: 15%;
+  cursor: inherit;
 }
 
 element-text {
+  font: "JetBrainsMono Nerd Font SemiBold 12";
   vertical-align: 0.5;
   horizontal-align: 0.5;
-  padding: 6px;
-  margin: 6px;
 }
