@@ -46,7 +46,7 @@ main() {
 
     # Open the selected file in the terminal with the text editor
     if [ -n "$file" ]; then
-        $term -e $edit "$file"
+        $tty -e $edit "$file"
     fi
 }
 
