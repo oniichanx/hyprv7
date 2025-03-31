@@ -10,6 +10,7 @@ tty=kitty
 configs="$HOME/.config/hypr/configs"
 UserConfigs="$HOME/.config/hypr/UserConfigs"
 UserSettings="$HOME/.config/hypr/"
+scriptsDir="$HOME/.config/hypr/scripts"
 
 # Function to display the menu options
 menu() {
@@ -21,6 +22,7 @@ menu() {
 5. View / Edit  Decorations & Animations
 6. View / Edit  Workspace-Rules
 7. View / Edit  Workspace-Rules-new
+8. View / Edit  Choose Kitty Terminal Theme
 
 EOF
 }
@@ -38,11 +40,14 @@ main() {
         5) file="$UserConfigs/UserDecorAnimations.conf" ;;
         6) file="$UserConfigs/WindowRules.conf" ;;
         7) file="$UserConfigs/WindowRules-new.conf" ;;
+        8) $scriptsDir/Kitty_themes.sh ;;
         *) return ;;  # Do nothing for invalid choices
     esac
 
     # Open the selected file in the terminal with the text editor
-    $tty -e $edit "$file"
+    if [ -n "$file" ]; then
+        $term -e $edit "$file"
+    fi
 }
 
 # Check if rofi is already running
