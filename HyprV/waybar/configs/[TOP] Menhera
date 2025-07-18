@@ -294,7 +294,7 @@
   "hyprland/language": {
     "interval": 30,
     "format": " {}",
-    "on-click": "~/.config/HyprV/hypr/scripts/LanguageChange.sh swkb",
+    "on-click": "~/.config/HyprV/hypr/scripts/SwitchKeyboardLayout.sh",
     "signal": 8
   },
 
