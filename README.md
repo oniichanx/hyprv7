@@ -131,7 +131,7 @@ pacman -S ttf-dejavu ttf-liberation ttf-droid ttf-ubuntu-font-family noto-fonts 
 
 yay -S ttf-gelasio-ib ttf-caladea ttf-carlito ttf-liberation-sans-narrow ttf-ms-fonts ttf-tlwg ttf-maple ttf-twemoji
 
-yay -S ttf-fira-code ttf-fantasque-nerd ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-jetbrains-mono otf-font-awesome noto-fonts-emoji adobe-source-code-pro-fonts
+yay -S  adobe-source-code-pro-fonts noto-fonts-emoji otf-font-awesome ttf-fira-code ttf-fantasque-nerd ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-victor-mono
 ```
 ---
 - #### install apple fonts manual
