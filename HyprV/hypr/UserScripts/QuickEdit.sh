@@ -9,7 +9,7 @@ tty=kitty
 # Paths to configuration directories
 configs="$HOME/.config/hypr/configs"
 UserConfigs="$HOME/.config/hypr/UserConfigs"
-UserSettings="$HOME/.config/hypr/"
+UserSettings="$HOME/.config/hypr"
 scriptsDir="$HOME/.config/hypr/scripts"
 
 # Function to display the menu options
