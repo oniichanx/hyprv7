@@ -367,22 +367,22 @@ if [[ $STAR == "Y" || $STAR == "y" ]]; then
 	cp Extras/starship.toml ~/.config/
 fi
 
-# Set wallpaper using swww (added code)
+# Set wallpaper using startup.sh one times
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to activate the Wallpaper? (y,n) ' SET_WALLPAPER
 if [[ "$SET_WALLPAPER" == "Y" || "$SET_WALLPAPER" == "y" ]]; then
-    echo -e "$CNT - Setting the wallpaper using swww..."
-    wallpaper="$HOME/.config/HyprV/hypr/wallpaper_effects/.wallpaper_modified"
-    swww="swww img"
-    
-    # Check if wallpaper file exists before applying it
-    if [[ -f "$wallpaper" ]]; then
-        $swww "$wallpaper"
-        echo -e "$COK - Wallpaper set successfully."
+    echo -e "$CAC - User chose to activate Wallpaper."
+
+    # กำหนด path ของไฟล์ hyprland.conf
+    config_file="$HOME/.config/hypr/hyprland.conf"
+
+    # ใช้ sed แก้ไขไฟล์โดยลบ # ที่หน้าบรรทัดที่มี 'exec-one startup.sh'
+    if sed -i '/#exec-once = startup.sh/s/^#//' "$config_file"; then
+        echo -e "$COK - Successfully updated hyprland.conf"
     else
-        echo -e "$CER - Wallpaper file not found. Please check the path and try again."
+        echo -e "$CER - Failed to update hyprland.conf"
     fi
 else
-    echo -e "$CNT - Wallpaper setup skipped."
+    echo -e "$CWR - User chose not to activate Wallpaper."
 fi
 
 ### Set Default Browser ###
