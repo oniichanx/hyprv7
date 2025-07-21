@@ -25,6 +25,7 @@ prep_stage=(
 	wl-clipboard
 	cliphist
 	python-requests
+	python-pyquery
 	pacman-contrib
 )
 
