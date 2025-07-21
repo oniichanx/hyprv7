@@ -372,11 +372,9 @@ read -rep $'[\e[1;33mACTION\e[0m] - Would you like to activate the Wallpaper? (y
 if [[ "$SET_WALLPAPER" == "Y" || "$SET_WALLPAPER" == "y" ]]; then
     echo -e "$CAC - User chose to activate Wallpaper."
 
-    # กำหนด path ของไฟล์ hyprland.conf
     config_file="$HOME/.config/hypr/hyprland.conf"
 
-    # ใช้ sed แก้ไขไฟล์โดยลบ # ที่หน้าบรรทัดที่มี 'exec-one startup.sh'
-    if sed -i '/#exec-once = startup.sh/s/^#//' "$config_file"; then
+    if sed -i 's|#exec-once = ~/.config/hypr/startup.sh|exec-once = ~/.config/hypr/startup.sh|' "$config_file"; then
         echo -e "$COK - Successfully updated hyprland.conf"
     else
         echo -e "$CER - Failed to update hyprland.conf"
