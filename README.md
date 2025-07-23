@@ -597,7 +597,8 @@ to this one
 
 <details>
   <summary><strong> How to fix sddm wrong login on muit monitor? </strong></summary>
-
+  
+---
 - This is of turn off monitor input id to show sddm for 1 monitor
 
 ```
@@ -609,6 +610,7 @@ sudo nano /usr/share/sddm/scripts/Xsetup
 xrandr --output DP-5 --off
 xrandr --output DP-3 --off
 ```
+---
 
 </details>
 
