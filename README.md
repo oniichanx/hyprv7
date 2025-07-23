@@ -597,11 +597,12 @@ to this one
 
 <details>
   <summary><strong> How to fix sddm wrong login on muit monitor? </strong></summary>
-  
+
+- This is of turn off monitor input id to show sddm for 1 monitor
+
 ```
 sudo nano /usr/share/sddm/scripts/Xsetup
 ```
-- This is of turn off monitor input id to show sddm for 1 monitor
 
 - Find input monitor with `xrandr | grep -w connected` but sometime is not correct
 ```
