@@ -599,7 +599,7 @@ to this one
   <summary><strong> How to fix sddm wrong login on muit monitor? </strong></summary>
   
 ---
-- This is of turn off monitor input id to show sddm for 1 monitor
+- This is for turn off monitor input id to show sddm for 1 monitor
 
 ```
 sudo nano /usr/share/sddm/scripts/Xsetup
