@@ -596,6 +596,22 @@ to this one
 </details>
 
 <details>
+  <summary><strong> How to fix sddm wrong login on muit monitor? </strong></summary>
+  
+```
+sudo nano /usr/share/sddm/scripts/Xsetup
+```
+- This is of turn off monitor input id to show sddm for 1 monitor
+
+- Find input monitor with `xrandr | grep -w connected` but sometime is not correct
+```
+xrandr --output DP-5 --off
+xrandr --output DP-3 --off
+```
+
+</details>
+
+<details>
   <summary><strong> How to reroute permanently a microphone to make it mono? on PIPEWIRE </strong></summary>
 
 ---
