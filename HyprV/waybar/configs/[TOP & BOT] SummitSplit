@@ -23,8 +23,9 @@
 "margin-right": 8,
 
 "modules-left": [
-	"cpu", 
-	"temperature", 
+	"cpu",
+	"power-profiles-daemon",
+	"temperature",
 	"memory",
 	"disk", 
 	],
