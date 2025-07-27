@@ -308,7 +308,10 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
 	cp -r ~/.config/HyprV/rofi/* ~/.config/rofi/
 	ln -sf ~/.config/HyprV/kitty/kitty.conf ~/.config/kitty/kitty.conf
 	cp -r ~/.config/HyprV/kitty/kitty-themes/ ~/.config/kitty/kitty-themes
-	ln -sf ~/.config/HyprV/swaync ~/.config/
+	ln -sf ~/.config/HyprV/swaync/icons ~/.config/swaync
+	ln -sf ~/.config/HyprV/swaync/imgages ~/.config/swaync
+	ln -sf ~/.config/HyprV/swaync/config.json ~/.config/swaync
+	ln -sf ~/.config/HyprV/swaync/style ~/.config/swaync
 	#ln -sf ~/.config/HyprV/swaylock/config ~/.config/swaylock/config
 	ln -sf ~/.config/HyprV/waybar/configs/[TOP]\ Simple ~/.config/waybar/config
 	ln -sf ~/.config/HyprV/waybar/style/[Colored]\ Translucent.css ~/.config/waybar/style.css
