@@ -8,7 +8,7 @@ IFS=$'\n\t'
 ROFI_THEMES_DIR_CONFIG="$HOME/.config/rofi/themes"
 ROFI_CONFIG_FILE="$HOME/.config/rofi/config.rasi"
 SED=$(which sed)
-iDIR="$HOME/.config/HyprV/mako/icons"
+iDIR="$HOME/.config/HyprV/swaync"
 ROFI_THEME_FOR_THIS_SCRIPT="$HOME/.config/rofi/config-rofi-theme.rasi"
 
 # --- Helper Functions ---

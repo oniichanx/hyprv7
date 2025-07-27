@@ -11,7 +11,7 @@ focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{pri
 rofi_theme="$HOME/.config/rofi/config-wallpaper-effect.rasi"
 
 # Directory for swaync
-iDIR="$HOME/.config/HyprV/mako/icons"
+iDIR="$HOME/.config/HyprV/swaync/images"
 iDIRi="$HOME/.config/swaync/icons"
 
 # swww transition config

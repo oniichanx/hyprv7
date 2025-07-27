@@ -6,7 +6,7 @@
 mDIR="$HOME/Music/"
 
 # Directory for icons
-iDIR="$HOME/.config/HyprV/mako/icons"
+iDIR="$HOME/.config/HyprV/swaync/icons"
 
 # Online Stations. Edit as required
 declare -A online_music=(

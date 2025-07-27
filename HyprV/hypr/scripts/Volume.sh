@@ -2,7 +2,7 @@
 # /* ---- 💫 https://github.com/oniichanx 💫 ---- */  ##
 # Scripts for volume controls for audio and mic 
 
-iDIR="$HOME/.config/HyprV/mako/icons"
+iDIR="$HOME/.config/HyprV/swaync/icons"
 sDIR="$HOME/.config/hypr/scripts"
 
 # Get Volume

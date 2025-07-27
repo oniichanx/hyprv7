@@ -9,7 +9,7 @@ themes_dir="$HOME/.oh-my-zsh/themes"
 file_extension=".zsh-theme"
 
 # Directory for swaync
-iDIR="$HOME/.config/HyprV/mako/icons"
+iDIR="$HOME/.config/HyprV/swaync/images"
 
 themes_array=($(find "$themes_dir" -type f -name "*$file_extension" -exec basename {} \; | sed -e "s/$file_extension//"))
 

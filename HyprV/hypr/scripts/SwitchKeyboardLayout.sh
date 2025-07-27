@@ -3,7 +3,7 @@
 
 layout_file="$HOME/.cache/kb_layout"
 settings_file="$HOME/.config/hypr/UserConfigs/Settings.conf"
-notif_icon="$HOME/.config/HyprV/mako/icons/bell.png"
+notif_icon="$HOME/.config/HyprV/swaync/icons/ja.png"
 
 ignore_patterns=(
   "--(avrcp)"

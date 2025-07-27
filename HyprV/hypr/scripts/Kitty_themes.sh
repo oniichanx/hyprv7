@@ -6,7 +6,7 @@
 kitty_themes_DiR="$HOME/.config/kitty/kitty-themes" # Kitty Themes Directory
 theme_path="$kitty_themes_DiR/$theme.conf"
 kitty_config="$HOME/.config/kitty/kitty.conf"
-iDIR="$HOME/.config/mako/images"
+iDIR="$HOME/.config/swaync/images"
 rofi_theme="$HOME/.config/rofi/config-kitty-theme.rasi"
 
 # Check if the Kitty Themes directory exists

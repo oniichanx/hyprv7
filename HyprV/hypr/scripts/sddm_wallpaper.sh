@@ -15,7 +15,7 @@ rofi_wallust="$HOME/.config/rofi/wallust/colors-rofi.rasi"
 sddm_theme_conf="$sddm_simple/theme.conf"
 
 # Directory for swaync
-iDIR="$HOME/.config/mako/icons"
+iDIR="$HOME/.config/swaync/icons"
 iDIRi="$HOME/.config/swaync/icons"
 
 # Parse arguments

@@ -9,7 +9,7 @@ SCRIPTSDIR="$HOME/.config/hypr/scripts"
 wallpaper_current="$HOME/.config/hypr/wallpaper_effects/.wallpaper_current"
 
 # Directory for swaync
-iDIR="$HOME/.config/HyprV/mako/icons"
+iDIR="$HOME/.config/HyprV/swaync/images"
 iDIRi="$HOME/.config/swaync/icons"
 
 # swww transition config
