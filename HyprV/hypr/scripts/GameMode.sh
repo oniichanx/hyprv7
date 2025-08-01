@@ -17,7 +17,7 @@ if [ "$HYPRGAMEMODE" = 1 ]; then
         keyword general:border_size 1;\
         keyword decoration:rounding 0"
     swww kill 
-    notify-send -e -u low -i "$notif" "Gamemode" "Enabled"
+    notify-send -e -u low -i "$notif" " Gamemode" " Enabled"
     exit
 else
     # Restore normal mode and send notification
@@ -34,7 +34,7 @@ else
     ${SCRIPTSDIR}/WallustSwww.sh
     sleep 0.5
     ${SCRIPTSDIR}/Refresh.sh
-    notify-send -e -u normal -i "$notif" "Gamemode" "Disabled"
+    notify-send -e -u normal -i "$notif" " Gamemode" " Disabled"
     exit
 fi
 
