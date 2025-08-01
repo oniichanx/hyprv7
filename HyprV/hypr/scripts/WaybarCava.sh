@@ -18,6 +18,7 @@ done
 config_file="/tmp/bar_cava_config"
 cat >"$config_file" <<EOF
 [general]
+framerate = 30
 bars = 10
 
 [input]

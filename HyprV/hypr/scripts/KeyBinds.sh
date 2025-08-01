@@ -11,24 +11,29 @@ if pidof rofi > /dev/null; then
 fi
 
 # Define the config files
-KEYBINDS_CONF="$HOME/.config/hypr/UserConfigs/KeyBinds.conf"
-USER_KEYBINDS_CONF="$HOME/.config/hypr/UserConfigs/UserKeybinds.conf"
-LAPTOP_CONF="$HOME/.config/hypr/UserConfigs/Laptop.conf"
+keybinds_conf="$HOME/.config/hypr/UserConfigs/KeyBinds.conf"
+user_keybinds_conf="$HOME/.config/hypr/UserConfigs/UserKeybinds.conf"
+laptop_conf="$HOME/.config/hypr/UserConfigs/Laptop.conf"
+rofi_theme="$HOME/.config/rofi/config-keybinds.rasi"
+msg='☣️ NOTE ☣️: Clicking with Mouse or Pressing ENTER will have NO function'
 
-# Combine the contents of the keybinds files and filter for keybinds
-KEYBINDS=$(cat "$KEYBINDS_CONF" "$USER_KEYBINDS_CONF" | grep -E '^(bind|bindl|binde|bindm)')
+# combine the contents of the keybinds files and filter for keybinds
+keybinds=$(cat "$keybinds_conf" "$user_keybinds_conf" | grep -E '^(bind|bindl|binde|bindm)')
 
-# Check if Laptop.conf exists and add its keybinds if present
-if [[ -f "$LAPTOP_CONF" ]]; then
-    LAPTOP_BINDS=$(grep -E '^(bind|bindl|binde|bindm)' "$LAPTOP_CONF")
-    KEYBINDS+=$'\n'"$LAPTOP_BINDS"
+# check if laptop.conf exists and add its keybinds if present
+if [[ -f "$laptop_conf" ]]; then
+    laptop_binds=$(grep -E '^(bind|bindl|binde|bindm' "$laptop_conf")
+    keybinds+=$'\n'"$laptop_binds"
 fi
 
 # check for any keybinds to display
-if [[ -z "$KEYBINDS" ]]; then
-    echo "No keybinds found."
+if [[ -z "$keybinds" ]]; then
+    echo "no keybinds found."
     exit 1
 fi
 
-# Use rofi to display the keybinds
-echo "$KEYBINDS" | rofi -dmenu -i -p "Keybinds" -config ~/.config/rofi/config-keybinds.rasi
+# replace $mainmod with super in the displayed keybinds for rofi
+display_keybinds=$(echo "$keybinds" | sed 's/\$mainMod/SUPER/g')
+
+# use rofi to display the keybinds with the modified content
+echo "$display_keybinds" | rofi -dmenu -i -config "$rofi_theme" -mesg "$msg"
