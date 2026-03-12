@@ -33,7 +33,7 @@ prep_stage=(
 nvidia_stage=(
 	linux-zen
 	linux-zen-headers
-	nvidia-dkms
+	nvidia-open-dkms
 	nvidia-settings
 	libva
 	libva-nvidia-driver-git
