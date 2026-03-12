@@ -27,7 +27,7 @@ NOTES: You need to install yay! I don't know if this project will have an option
 Run this command:
 
 ```
-yay -Sy linux-headers linux-zen linux-zen-headers nvidia-dkms qt5-wayland qt5ct libva libva-nvidia-driver-git
+yay -Sy linux-headers linux-zen linux-zen-headers nvidia-open-dkms qt5-wayland qt5ct libva libva-nvidia-driver-git
 ```
 
 Write this in /etc/mkinitcpio.conf:
